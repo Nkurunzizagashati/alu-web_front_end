@@ -394,7 +394,6 @@ html {
   .social-link {
     display: block;
   }
-
   .social-link > svg {
     fill: var(--text-color);
   }
