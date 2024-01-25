@@ -1,0 +1,15 @@
+$base-text-color: #3d3d3d;
+$base-background-color: #6d6d6d;
+
+body {
+  color: $base-text-color;
+  background-color: $base-background-color;
+}
+
+p {
+  color: $base-text-color;
+}
+
+h2 {
+  background-color: $base-background-color;
+}
