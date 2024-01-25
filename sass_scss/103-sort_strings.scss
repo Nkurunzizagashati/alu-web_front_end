@@ -1,0 +1,4 @@
+@use "@sass-fairy/list";
+@import "103-sort_strings";
+
+@debug list.sort($list_to_sort);
