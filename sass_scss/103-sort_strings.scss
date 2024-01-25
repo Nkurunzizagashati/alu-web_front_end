@@ -1,3 +1,40 @@
-@use "@sass-fairy/list";
-@import "103-sort_list";
-@debug list.sort($list_to_sort);
+// Example list to sort
+$list_to_sort: 5, 2, 8, 1, 3;
+
+// Function to find the minimum value in a list
+@function find-min($list) {
+  $min: nth($list, 1);
+  @for $i from 2 through length($list) {
+    $current: nth($list, $i);
+    @if $current < $min {
+      $min: $current;
+    }
+  }
+  @return $min;
+}
+
+// Function to remove a value from a list
+@function remove-value($list, $value) {
+  $result: ();
+  @for $i from 1 through length($list) {
+    @if nth($list, $i) != $value {
+      $result: append($result, nth($list, $i));
+    }
+  }
+  @return $result;
+}
+
+// Function to sort a list
+@function sort-list($list) {
+  $sorted-list: ();
+  @for $i from 1 through length($list) {
+    $min: find-min($list);
+    $sorted-list: append($sorted-list, $min);
+    $list: remove-value($list, $min);
+  }
+  @return $sorted-list;
+}
+
+// Sort the list and print the result in debug output
+$list_to_sort: sort-list($list_to_sort);
+@debug $list_to_sort;
