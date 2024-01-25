@@ -1,21 +1,21 @@
+$break-point-sm: 320px;
+$break-point-md: 640px;
+$break-point-lg: 960px;
+$text-color: #1d1d1d;
 h1 {
   font-size: 20px;
-
-  @media screen and (max-width: 960px) {
-    font-size: 18px;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 320px) {
+  @media only screen and (max-width: $break-point-sm) {
     font-size: 14px;
   }
+  @media only screen and (max-width: $break-point-md) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $break-point-lg) {
+    font-size: 18px;
+  }
 }
-
 h1.small {
-  @media screen and (max-width < 320px) {
-    color: #1d1d1d;
+  @media only screen and (max-width: 320px) {
+    color: $text-color;
   }
 }
