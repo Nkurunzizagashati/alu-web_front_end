@@ -1,9 +1,9 @@
 body {
   color: #3d3d3d;
+}
 
-  .red {
-    &:first-child {
-      color: #ff0000;
-    }
+body .red {
+  &:first-child {
+    color: #ff0000;
   }
 }
