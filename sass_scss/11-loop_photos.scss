@@ -1,0 +1,7 @@
+@import "file-name";
+
+@each $name, $url in $list-names {
+  .photo-#{$name} {
+    background-image: $url;
+  }
+}
