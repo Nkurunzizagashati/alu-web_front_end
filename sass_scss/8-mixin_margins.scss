@@ -1,0 +1,12 @@
+@mixin base($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+body {
+  @include base(10px);
+}
+
+div {
+  @include base(15px);
+}
