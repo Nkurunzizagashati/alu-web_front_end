@@ -880,7 +880,7 @@ label {
   background-color: var(--color-white);
 }
 
-.form-group:focus {
+.form-group:focus-within {
   background-color: var(--color-light-grey);
   transition: 0.3s;
 }
