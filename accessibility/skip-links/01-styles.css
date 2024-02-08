@@ -343,7 +343,7 @@ a:active {
 }
 
 .off-screen {
-  left: -100vh;
+  left: -100vw;
   position: absolute;
 }
 
