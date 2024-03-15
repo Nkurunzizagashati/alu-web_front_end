@@ -19,11 +19,11 @@ function countPrimeNumbers() {
   return arr.length;
 }
 const startTime = performance.now();
-for (let i = 0; i < 100; i++) {
-  setTimeout(() => {
+setTimeout(() => {
+  for (let i = 0; i < 100; i++) {
     countPrimeNumbers();
-  }, 0);
-}
+  }
+}, 0);
 const endTime = performance.now();
 
 console.log(
