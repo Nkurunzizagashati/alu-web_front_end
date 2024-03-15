@@ -1,4 +1,3 @@
-const startTime = performance.now();
 function countPrimeNumbers() {
   let limit = 100;
   const arr = [];
@@ -7,7 +6,6 @@ function countPrimeNumbers() {
     let j = 2;
     for (j; j < i; j++) {
       if (i % j === 0) {
-        j = 2;
         break;
       }
     }
@@ -17,8 +15,9 @@ function countPrimeNumbers() {
     }
   }
 
-  return arr;
+  return arr.length;
 }
+const startTime = performance.now();
 const primeNumbersArr = countPrimeNumbers();
 const endTime = performance.now();
 
