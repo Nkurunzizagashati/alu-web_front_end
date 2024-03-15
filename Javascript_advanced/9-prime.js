@@ -19,6 +19,7 @@ function countPrimeNumbers() {
 
   return arr;
 }
+const primeNumbersArr = countPrimeNumbers();
 const endTime = performance.now();
 
 console.log(
