@@ -11,7 +11,8 @@ function queryWikipedia(callback) {
     "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*"
   );
   xhl.onload = () => {
-    callback(xhl.response);
+    const data = JSON.parse(xhl.response);
+    callback(data.query.pages[21721040]["extract"]);
   };
 
   xhl.send();
